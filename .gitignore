@@ -1,3 +1,9 @@
 ASL_Dataset/
 
 .env/
+
+__pycache__/
+
+var/logs/
+
+data/
