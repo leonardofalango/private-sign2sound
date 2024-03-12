@@ -13,7 +13,7 @@ y = df['label']
 
 
 
-for i in range(1000):
+for i in range(1):
     
     X_train, X_test, y_train, y_test = train_test_split(df.drop('label', axis=1), df['label'], test_size=0.2)
 

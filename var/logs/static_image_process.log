@@ -2,3 +2,110 @@
 2024-03-12 15:35:37,711 - INFO - Processing folder: ./ASL_Dataset/Train/A
 2024-03-12 15:35:53,452 - INFO - Data saved to var/ASL/dataset_data.csv
 2024-03-12 15:35:53,452 - INFO - Application is closing
+2024-03-12 16:00:08,331 - INFO - Application started
+2024-03-12 16:00:08,339 - INFO - Processing folder: ./ASL_Dataset/Train/A
+2024-03-12 16:01:20,893 - INFO - Total images for letter A: 235
+2024-03-12 16:01:20,893 - INFO - Total errors for letter A: 5761
+2024-03-12 16:01:20,893 - INFO - Difference for letter A: -5526
+2024-03-12 16:01:20,913 - INFO - Processing folder: ./ASL_Dataset/Train/B
+2024-03-12 16:02:12,323 - INFO - Data saved to var/ASL/dataset_data.csv
+2024-03-12 16:02:12,323 - INFO - Application is closing
+2024-03-12 16:02:21,293 - INFO - Application started
+2024-03-12 16:02:21,293 - INFO - Processing folder: ./ASL_Dataset/Train/A
+2024-03-12 16:03:34,949 - INFO - Total images for letter A: 235
+2024-03-12 16:03:34,949 - INFO - Total errors for letter A: 5761
+2024-03-12 16:03:34,949 - INFO - Difference for letter A: -5526
+2024-03-12 16:03:34,949 - INFO - Processing folder: ./ASL_Dataset/Train/B
+2024-03-12 16:04:54,368 - INFO - Total images for letter B: 0
+2024-03-12 16:04:54,368 - INFO - Total errors for letter B: 5996
+2024-03-12 16:04:54,368 - INFO - Difference for letter B: -5996
+2024-03-12 16:04:54,368 - INFO - Processing folder: ./ASL_Dataset/Train/C
+2024-03-12 16:06:34,788 - INFO - Total images for letter C: 3
+2024-03-12 16:06:34,788 - INFO - Total errors for letter C: 5993
+2024-03-12 16:06:34,788 - INFO - Difference for letter C: -5990
+2024-03-12 16:06:34,788 - INFO - Processing folder: ./ASL_Dataset/Train/D
+2024-03-12 16:07:53,178 - INFO - Total images for letter D: 1
+2024-03-12 16:07:53,178 - INFO - Total errors for letter D: 5995
+2024-03-12 16:07:53,178 - INFO - Difference for letter D: -5994
+2024-03-12 16:07:53,178 - INFO - Processing folder: ./ASL_Dataset/Train/E
+2024-03-12 16:09:12,308 - INFO - Total images for letter E: 23
+2024-03-12 16:09:12,308 - INFO - Total errors for letter E: 5973
+2024-03-12 16:09:12,308 - INFO - Difference for letter E: -5950
+2024-03-12 16:09:12,308 - INFO - Processing folder: ./ASL_Dataset/Train/F
+2024-03-12 16:10:45,643 - INFO - Total images for letter F: 0
+2024-03-12 16:10:45,643 - INFO - Total errors for letter F: 5996
+2024-03-12 16:10:45,643 - INFO - Difference for letter F: -5996
+2024-03-12 16:10:45,643 - INFO - Processing folder: ./ASL_Dataset/Train/G
+2024-03-12 16:12:05,790 - INFO - Total images for letter G: 67
+2024-03-12 16:12:05,790 - INFO - Total errors for letter G: 5929
+2024-03-12 16:12:05,790 - INFO - Difference for letter G: -5862
+2024-03-12 16:12:05,790 - INFO - Processing folder: ./ASL_Dataset/Train/H
+2024-03-12 16:13:29,943 - INFO - Total images for letter H: 118
+2024-03-12 16:13:29,943 - INFO - Total errors for letter H: 5878
+2024-03-12 16:13:29,943 - INFO - Difference for letter H: -5760
+2024-03-12 16:13:29,943 - INFO - Processing folder: ./ASL_Dataset/Train/I
+2024-03-12 16:15:06,178 - INFO - Total images for letter I: 8
+2024-03-12 16:15:06,178 - INFO - Total errors for letter I: 5988
+2024-03-12 16:15:06,178 - INFO - Difference for letter I: -5980
+2024-03-12 16:15:06,178 - INFO - Processing folder: ./ASL_Dataset/Train/J
+2024-03-12 16:16:33,428 - INFO - Total images for letter J: 201
+2024-03-12 16:16:33,428 - INFO - Total errors for letter J: 5795
+2024-03-12 16:16:33,428 - INFO - Difference for letter J: -5594
+2024-03-12 16:16:33,428 - INFO - Processing folder: ./ASL_Dataset/Train/K
+2024-03-12 16:18:04,412 - INFO - Total images for letter K: 1
+2024-03-12 16:18:04,412 - INFO - Total errors for letter K: 5995
+2024-03-12 16:18:04,412 - INFO - Difference for letter K: -5994
+2024-03-12 16:18:04,412 - INFO - Processing folder: ./ASL_Dataset/Train/L
+2024-03-12 16:19:30,604 - INFO - Total images for letter L: 15
+2024-03-12 16:19:30,604 - INFO - Total errors for letter L: 5981
+2024-03-12 16:19:30,604 - INFO - Difference for letter L: -5966
+2024-03-12 16:19:30,604 - INFO - Processing folder: ./ASL_Dataset/Train/O
+2024-03-12 16:20:58,009 - INFO - Total images for letter O: 17
+2024-03-12 16:20:58,009 - INFO - Total errors for letter O: 5979
+2024-03-12 16:20:58,009 - INFO - Difference for letter O: -5962
+2024-03-12 16:20:58,009 - INFO - Processing folder: ./ASL_Dataset/Train/P
+2024-03-12 16:22:26,078 - INFO - Total images for letter P: 0
+2024-03-12 16:22:26,078 - INFO - Total errors for letter P: 5996
+2024-03-12 16:22:26,078 - INFO - Difference for letter P: -5996
+2024-03-12 16:22:26,078 - INFO - Processing folder: ./ASL_Dataset/Train/Q
+2024-03-12 16:24:01,733 - INFO - Total images for letter Q: 0
+2024-03-12 16:24:01,733 - INFO - Total errors for letter Q: 5996
+2024-03-12 16:24:01,733 - INFO - Difference for letter Q: -5996
+2024-03-12 16:24:01,749 - INFO - Processing folder: ./ASL_Dataset/Train/R
+2024-03-12 16:25:48,883 - INFO - Total images for letter R: 50
+2024-03-12 16:25:48,883 - INFO - Total errors for letter R: 5916
+2024-03-12 16:25:48,883 - INFO - Difference for letter R: -5866
+2024-03-12 16:25:48,883 - INFO - Processing folder: ./ASL_Dataset/Train/S
+2024-03-12 16:27:18,477 - INFO - Total images for letter S: 59
+2024-03-12 16:27:18,477 - INFO - Total errors for letter S: 5937
+2024-03-12 16:27:18,477 - INFO - Difference for letter S: -5878
+2024-03-12 16:27:18,477 - INFO - Processing folder: ./ASL_Dataset/Train/T
+2024-03-12 16:28:42,733 - INFO - Total images for letter T: 30
+2024-03-12 16:28:42,733 - INFO - Total errors for letter T: 5618
+2024-03-12 16:28:42,733 - INFO - Difference for letter T: -5588
+2024-03-12 16:28:42,733 - INFO - Processing folder: ./ASL_Dataset/Train/U
+2024-03-12 16:29:58,207 - INFO - Total images for letter U: 49
+2024-03-12 16:29:58,207 - INFO - Total errors for letter U: 4493
+2024-03-12 16:29:58,208 - INFO - Difference for letter U: -4444
+2024-03-12 16:29:58,208 - INFO - Processing folder: ./ASL_Dataset/Train/V
+2024-03-12 16:31:25,289 - INFO - Total images for letter V: 6
+2024-03-12 16:31:25,289 - INFO - Total errors for letter V: 5990
+2024-03-12 16:31:25,289 - INFO - Difference for letter V: -5984
+2024-03-12 16:31:25,289 - INFO - Processing folder: ./ASL_Dataset/Train/W
+2024-03-12 16:32:54,388 - INFO - Total images for letter W: 37
+2024-03-12 16:32:54,388 - INFO - Total errors for letter W: 5959
+2024-03-12 16:32:54,388 - INFO - Difference for letter W: -5922
+2024-03-12 16:32:54,388 - INFO - Processing folder: ./ASL_Dataset/Train/X
+2024-03-12 16:34:30,298 - INFO - Total images for letter X: 7
+2024-03-12 16:34:30,298 - INFO - Total errors for letter X: 5989
+2024-03-12 16:34:30,298 - INFO - Difference for letter X: -5982
+2024-03-12 16:34:30,298 - INFO - Processing folder: ./ASL_Dataset/Train/Y
+2024-03-12 16:35:52,300 - INFO - Total images for letter Y: 40
+2024-03-12 16:35:52,300 - INFO - Total errors for letter Y: 5680
+2024-03-12 16:35:52,300 - INFO - Difference for letter Y: -5640
+2024-03-12 16:35:52,300 - INFO - Processing folder: ./ASL_Dataset/Train/Z
+2024-03-12 16:37:18,791 - INFO - Total images for letter Z: 90
+2024-03-12 16:37:18,791 - INFO - Total errors for letter Z: 5906
+2024-03-12 16:37:18,791 - INFO - Difference for letter Z: -5816
+2024-03-12 16:37:19,111 - INFO - Data saved to var/ASL/dataset_data.csv
+2024-03-12 16:37:19,111 - INFO - Application is closing
