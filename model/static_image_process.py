@@ -1,17 +1,20 @@
 import os
 import cv2
-import time
 import logging
 import pandas as pd
 import mediapipe as mp
 
+
 mp_hands = mp.solutions.hands.Hands(
     static_image_mode=True,
+    max_num_hands=1,
 )
 mp_drawing = mp.solutions.drawing_utils
 hands = mp.solutions.hands
 
-lms = [[] for x in range(21)]
+lms_x = [[] for x in range(21)]
+lms_y = [[] for x in range(21)]
+lms_z = [[] for x in range(21)]
 label = []
 
 path = './ASL_Dataset/Train'
@@ -24,6 +27,10 @@ logging.basicConfig(
 logging.info("Application started")
 try:    
     for folder in os.listdir(path):
+        
+        if folder in ['Space', 'Nothing', 'M', 'N']:
+            continue
+    
         logging.info("Processing folder: %s/%s", path, folder)
         
         error_counter = 0
@@ -39,7 +46,10 @@ try:
                 logging.debug(f"Hand detected in {file}")
                 for hand_landmarks in img.multi_hand_landmarks:
                     for lm_index in range(21):
-                        lms[lm_index].append((hand_landmarks.landmark[lm_index].x, hand_landmarks.landmark[lm_index].y, hand_landmarks.landmark[lm_index].z))
+                        lms_x[lm_index].append((hand_landmarks.landmark[lm_index].x))
+                        lms_y[lm_index].append((hand_landmarks.landmark[lm_index].y))
+                        lms_z[lm_index].append((hand_landmarks.landmark[lm_index].z))
+                        
                     label.append(folder)
                     counter += 1
                 
@@ -59,8 +69,12 @@ except Exception as e:
 
 finally:
     
-    df = pd.DataFrame(lms)
+    df = pd.DataFrame(
+        lms_x + lms_y + lms_z,
+    )
+    
     df = df.T
+    
     df['label'] = label
     
     df.to_csv("var/ASL/dataset_data.csv", index=False)
