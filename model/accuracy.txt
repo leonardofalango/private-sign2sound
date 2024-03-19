@@ -1,0 +1,13 @@
+Model: KNeighborsClassifier Accuracy mean: 0.9009433962264151
+Model: RandomForestClassifier Accuracy mean: 0.8160377358490566
+Model: LogisticRegression Accuracy mean: 0.7830188679245284
+Model: SVM Accuracy mean: 0.7641509433962265
+Model: KNeighborsClassifier Accuracy mean: 0.8962264150943396
+Model: RandomForestClassifier Accuracy mean: 0.8160377358490566
+Model: LogisticRegression Accuracy mean: 0.8066037735849056
+Model: SVM Accuracy mean: 0.7830188679245284
+Model: KNeighborsClassifier Accuracy mean: 0.9198113207547169
+Model: RandomForestClassifier Accuracy mean: 0.8537735849056604
+Model: LogisticRegression Accuracy mean: 0.8207547169811321
+Model: SVM Accuracy mean: 0.7547169811320755
+Model: KNeighborsClassifier Accuracy mean: 0.8632075471698113
