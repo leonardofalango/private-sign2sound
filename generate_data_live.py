@@ -2,17 +2,18 @@ import cv2
 import time
 import pickle
 import logging
-import numpy as np
 import pandas as pd
 import mediapipe as mp
 
-set_label = "A"
+set_label = ""
+is_setting_label = True
 path = "var/ASL/data.csv"
 running = True
 fps = 0
+labels = []
 
 mp_hands = mp.solutions.hands.Hands(
-    max_num_hands=2,
+    max_num_hands=1,
 )
 mp_drawing = mp.solutions.drawing_utils
 hands = mp.solutions.hands
@@ -25,15 +26,13 @@ data_list = []
 
 
 logging.basicConfig(
-    filename="var/logs/hand_detector.log",
+    filename="var/logs/generate_data.log",
     level=logging.INFO,
     format="%(asctime)s:%(levelname)s:%(message)s",
 )
 
 try:
     cap = cv2.VideoCapture(0)
-    with open("model.pkl", "rb") as f:
-        model = pickle.load(f)
 
 except Exception as e:
     logging.error(e)
@@ -47,8 +46,6 @@ while running:
     if ret == False:
         break
 
-    cropped_img = frame
-
     img = mp_hands.process(frame)
     if img.multi_hand_landmarks:
         logging.debug(img.multi_hand_landmarks)
@@ -58,22 +55,6 @@ while running:
                 x[lm_index + 21] = hand_landmarks.landmark[lm_index].y
                 x[lm_index + 21 * 2] = hand_landmarks.landmark[lm_index].z
             mp_drawing.draw_landmarks(frame, hand_landmarks, hands.HAND_CONNECTIONS)
-
-            df = pd.DataFrame(x).T
-            pred = model.predict(df)
-
-            cv2.putText(
-                frame,
-                str(pred),
-                (10, 80),
-                font,
-                1,
-                (255, 0, 0),
-                2,
-                cv2.LINE_AA,
-            )
-
-            logging.debug("Prediction %s", pred)
 
     if current - start > 1:
         fps = 60 / (current - start)
@@ -90,12 +71,56 @@ while running:
         2,
         cv2.LINE_AA,
     )
+
+    cv2.putText(
+        frame,
+        f"set_label: {set_label}",
+        (10, 60),
+        font,
+        1,
+        (255, 0, 0),
+        2,
+        cv2.LINE_AA,
+    )
     cv2.imshow("Sign2Sound", frame)
+
+    if cv2.waitKey(1) & 0xFF == ord("l") or cv2.waitKey(1) & 0xFF == ord("U"):
+        img = mp_hands.process(frame)
+        if img.multi_hand_landmarks:
+            for hand_landmarks in img.multi_hand_landmarks:
+                for lm_index in range(21):
+                    aux[lm_index] = hand_landmarks.landmark[lm_index].x
+                    aux[lm_index + 21] = hand_landmarks.landmark[lm_index].y
+                    aux[lm_index + 21 * 2] = hand_landmarks.landmark[lm_index].z
+
+                print("data saved")
+
+                data_list.append(aux.copy())
+                cv2.putText(
+                    frame,
+                    f"data_saved:",
+                    (60, 10),
+                    font,
+                    1,
+                    (255, 0, 0),
+                    2,
+                    cv2.LINE_AA,
+                )
+                labels.append(set_label)
+        else:
+            logging.error("No hand detected")
+
+    if cv2.waitKey(1) & 0xFF == ord("n"):
+        is_setting_label = True
 
     if cv2.waitKey(1) & 0xFF == ord("q"):
         running = False
 
-labels = [set_label for i in range(len(data_list))]
+    if is_setting_label:
+        set_label = chr(cv2.waitKey(10000000)).upper()
+        is_setting_label = False
+
+
 df = pd.DataFrame(data_list)
 df.T
 df["label"] = labels
