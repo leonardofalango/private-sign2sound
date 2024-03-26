@@ -1,3 +1,5 @@
+import sys
+import pickle
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -8,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import normalize
 
-df = pd.read_csv("var/ASL/dataset_data.csv")
+df = pd.read_csv("var/ASL/complete_data.csv")
 
 X = df.drop("label", axis=1)
 y = df["label"]
@@ -54,8 +56,21 @@ for model_info in models:
 print("\n")
 print("_" * 30)
 print("\n")
+
+best_model = models[0]
 for model in models:
+    if np.mean(model["accuracy"]) > np.mean(best_model["accuracy"]):
+        best_model = model
+
     print(f'Model: {model["name"]} Accuracy mean: {np.mean(model["accuracy"])}')
     with open("./model/accuracy.txt", "+a") as f:
         f.write(f'Model: {model["name"]} Accuracy mean: {np.mean(model["accuracy"])}\n')
         f.close()
+
+try:
+    if sys.argv[1]:
+        with open(f"./{best_model['name']}-{accuracy * 100:.0f}.pkl", "wb") as f:
+            pickle.dump(best_model["model"], f)
+            f.close()
+except:
+    pass
